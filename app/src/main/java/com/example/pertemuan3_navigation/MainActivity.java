@@ -30,19 +30,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle); toggle.syncState();
         //membuat default navigation menu select
         if(savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessageFragment()).commit();
-        } navigationView.setCheckedItem(R.id.nav_message);}
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SocialMediaFragment()).commit();
+        } navigationView.setCheckedItem(R.id.nav_socialmedia);}
 
     //drawer menu fragment handler
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item)
     {
         switch (item.getItemId()){
-            case R.id.nav_message:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MessageFragment()).commit();
+            case R.id.nav_socialmedia:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new SocialMediaFragment()).commit();
                 break;
-            case R.id.nav_chat:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ChatFragment()).commit();
+            case R.id.nav_contac:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ContacFragment()).commit();
                 break;
             case R.id.nav_profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfilFragment()).commit();
